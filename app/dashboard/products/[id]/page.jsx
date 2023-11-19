@@ -28,13 +28,11 @@ const SingleProductPage = async ({ params }) => {
           <input type="text" name="color" placeholder={product.color} />
           <label>Size</label>
           <input type="text" name="size" placeholder={product.size} />
-          <label>Category: {product.cat}</label>
-          <select name="cat" id="cat">
-            <option value="kitchen" selected={product.cat}>
-              Kitchen
-            </option>
-            <option value="phone">Phone</option>
-            <option value="computer">Computer</option>
+          <label>Category</label>
+          <select value={product.cat} name="cat" id="cat">
+            <option value="Kitchen">Kitchen</option>
+            <option value="Phone">Phone</option>
+            <option value="Computer">Computer</option>
           </select>
           <label>Description</label>
           <textarea
