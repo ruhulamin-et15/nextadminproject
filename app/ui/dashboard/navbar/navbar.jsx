@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import styles from "./navbar.module.css";
 import { usePathname } from "next/navigation";
 import {} from "react-icons";

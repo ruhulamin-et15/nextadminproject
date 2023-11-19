@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "@/app/ui/dashboard/products/singleProduct/singleProduct.module.css";
 import { updateProduct } from "@/app/lib/action";
 import { fetchProduct } from "@/app/lib/data";

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "@/app/ui/dashboard/users/addUser/addUser.module.css";
 import { addUser } from "@/app/lib/action";
 
