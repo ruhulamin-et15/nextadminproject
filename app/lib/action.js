@@ -152,7 +152,7 @@ export const authenticate = async (prevState, formData) => {
   const { username, password } = Object.fromEntries(formData);
   try {
     await signIn("credentials", { username, password });
-  } catch (error) {
-    return "wrong username/password";
+  } catch (e) {
+    return redirect("/dashboard");
   }
 };
