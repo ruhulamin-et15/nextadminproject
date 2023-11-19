@@ -4,6 +4,7 @@ import { Product, User } from "./models";
 import { connectToDB } from "./utils";
 import { redirect } from "next/navigation";
 import bcrypt from "bcrypt";
+import { signIn } from "../auth";
 
 //add user
 export const addUser = async (formData) => {
@@ -144,4 +145,14 @@ export const deleteProduct = async (formData) => {
     throw new Error("product delete failed");
   }
   revalidatePath("/dashboard/products");
+};
+
+//authenticate route
+export const authenticate = async (prevState, formData) => {
+  const { username, password } = Object.fromEntries(formData);
+  try {
+    await signIn("credentials", { username, password });
+  } catch (error) {
+    return "wrong username/password";
+  }
 };

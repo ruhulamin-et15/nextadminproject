@@ -5,6 +5,7 @@ import Link from "next/link";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import { fetchUsers } from "@/app/lib/data";
 import { deleteUser } from "@/app/lib/action";
+import Image from "next/image";
 
 const UsersPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
@@ -34,7 +35,7 @@ const UsersPage = async ({ searchParams }) => {
             <tr key={user.id}>
               <td>
                 <div className={styles.user}>
-                  <img
+                  <Image
                     src={user.img || "/noavatar.png"}
                     alt=""
                     width={40}

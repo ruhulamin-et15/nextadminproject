@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "@/app/ui/dashboard/users/singleUser/singleUser.module.css";
-import Image from "next/image";
 import { fetchUser } from "@/app/lib/data";
 import { updateUser } from "@/app/lib/action";
+import Image from "next/image";
 
 const SingleUserPage = async ({ params }) => {
   const { id } = params;
