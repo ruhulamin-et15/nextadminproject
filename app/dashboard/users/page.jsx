@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "@/app/ui/dashboard/users/users.module.css";
 import Search from "@/app/ui/dashboard/search/search";
 import Link from "next/link";

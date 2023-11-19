@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import styles from "./pagination.module.css";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 

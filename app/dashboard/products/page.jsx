@@ -5,7 +5,6 @@ import styles from "@/app/ui/dashboard/products/products.module.css";
 import Search from "@/app/ui/dashboard/search/search";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const ProductsPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
