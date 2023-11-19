@@ -3,6 +3,7 @@ import { fetchProducts } from "@/app/lib/data";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import styles from "@/app/ui/dashboard/products/products.module.css";
 import Search from "@/app/ui/dashboard/search/search";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -34,13 +35,14 @@ const ProductsPage = async ({ searchParams }) => {
             <tr key={product.id}>
               <td>
                 <div className={styles.product}>
-                  <img
+                  <Image
                     src={product.img || "/noproduct.jpg"}
-                    alt=""
                     width={40}
                     height={40}
+                    alt=""
                     className={styles.productImage}
                   />
+
                   {product.title}
                 </div>
               </td>
