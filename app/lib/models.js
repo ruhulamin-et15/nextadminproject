@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-//user
+//user model
 const userSchema = new mongoose.Schema(
   {
     username: {
@@ -42,13 +42,17 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-//product
+//product model
 const productSchema = new mongoose.Schema(
   {
     title: {
       type: String,
       required: true,
       unique: true,
+    },
+    cat: {
+      type: String,
+      required: true,
     },
     desc: {
       type: String,
@@ -78,6 +82,7 @@ const productSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+//export all model
 export const User = mongoose.models.User || mongoose.model("User", userSchema);
 export const Product =
   mongoose.models.Product || mongoose.model("Product", productSchema);
